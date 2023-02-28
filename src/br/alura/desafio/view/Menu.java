@@ -1,4 +1,4 @@
-package br.alura.desafio;
+package br.alura.desafio.view;
 
 import java.awt.EventQueue;
 
@@ -14,7 +14,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Conversor extends JFrame {
+public class Menu extends JFrame {
 
 	/**
 	 * 
@@ -29,7 +29,7 @@ public class Conversor extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Conversor frame = new Conversor();
+					Menu frame = new Menu();
 					frame.setVisible(true);
 					frame.setResizable(false);
 				} catch (Exception e) {
@@ -42,7 +42,7 @@ public class Conversor extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Conversor() {
+	public Menu() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 593, 442);
 		contentPane = new JPanel();
@@ -77,9 +77,9 @@ public class Conversor extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (comboBox.getSelectedItem().equals("Conversor de Moedas")) {
-					ConversorMoedas conversorMoedas = new ConversorMoedas();
+					ConversorMoedasView conversorMoedasView = new ConversorMoedasView();
 					dispose();
-					conversorMoedas.setVisible(true);
+					conversorMoedasView.setVisible(true);
 
 				} else if (comboBox.getSelectedItem().equals("Conversor de Temperatura")) {
 
