@@ -1,18 +1,17 @@
 package br.alura.desafio.view;
 
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-
-import java.awt.Font;
-import java.awt.Color;
-import javax.swing.JComboBox;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class Menu extends JFrame {
 
@@ -32,6 +31,7 @@ public class Menu extends JFrame {
 					Menu frame = new Menu();
 					frame.setVisible(true);
 					frame.setResizable(false);
+					frame.setTitle("Conversores");
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -82,7 +82,9 @@ public class Menu extends JFrame {
 					conversorMoedasView.setVisible(true);
 
 				} else if (comboBox.getSelectedItem().equals("Conversor de Temperatura")) {
-
+					ConversorTemperaturaView conversorTenperaturaView = new ConversorTemperaturaView();
+					dispose();
+					conversorTenperaturaView.setVisible(true);
 				}
 			}
 		});

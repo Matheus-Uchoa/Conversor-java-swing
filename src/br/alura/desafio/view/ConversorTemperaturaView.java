@@ -1,8 +1,6 @@
 package br.alura.desafio.view;
 
 import java.awt.Color;
-
-
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -17,9 +15,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import br.alura.desafio.service.ConversorMoedas;
+import br.alura.desafio.service.ConversorTemperatura;
 
-public class ConversorMoedasView extends JFrame {
+public class ConversorTemperaturaView extends JFrame {
 
 	/**
 	 * 
@@ -36,10 +34,10 @@ public class ConversorMoedasView extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ConversorMoedasView frame = new ConversorMoedasView();
+					ConversorTemperaturaView frame = new ConversorTemperaturaView();
 					frame.setVisible(true);
 					frame.setResizable(false);
-					frame.setTitle("Conversor de Moedas");
+					frame.setTitle("Conversor de Temperatura");
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -50,7 +48,7 @@ public class ConversorMoedasView extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ConversorMoedasView() {
+	public ConversorTemperaturaView() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 519, 378);
 		contentPane = new JPanel();
@@ -59,12 +57,12 @@ public class ConversorMoedasView extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		ConversorMoedas conversor = new ConversorMoedas();
-		JLabel lblPageTitle = new JLabel("Conversor de Moedas");
+		ConversorTemperatura conversor = new ConversorTemperatura();
+		JLabel lblPageTitle = new JLabel("Conversor de Temperatura");
 		lblPageTitle.setForeground(new Color(255, 255, 255));
 		lblPageTitle.setFont(
-				new Font("Monocraft", lblPageTitle.getFont().getStyle(), lblPageTitle.getFont().getSize() + 4));
-		lblPageTitle.setBounds(146, 11, 227, 32);
+				new Font("Monocraft", lblPageTitle.getFont().getStyle(), 12));
+		lblPageTitle.setBounds(167, 10, 210, 32);
 		contentPane.add(lblPageTitle);
 
 		JComboBox<String> OpcoesConversao = new JComboBox<String>();
